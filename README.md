@@ -3,7 +3,6 @@
 A fun and interactive React application designed to help children learn about different types of clothing through exploration, quizzes, and dress-up activities.
 
 LIVE LINK : https://venkataramana-t.github.io/Wardrobe-Wonder-Children-s-Clothing-Learning-App/
-
 ## Features
 
 - **Explore Clothes**: Browse different clothing categories with audio pronunciation
@@ -57,6 +56,15 @@ wardrobe-app/
    npm run dev
    ```
 
+4. **Build for Production**
+   ```bash
+   npm run build
+   ```
+
+5. **Preview Production Build**
+   ```bash
+   npm run preview
+   ```
 
 ## Technologies Used
 
@@ -65,6 +73,10 @@ wardrobe-app/
 - **Tailwind CSS** - Styling framework
 - **Web Speech API** - Text-to-speech functionality
 
+## Browser Compatibility
+
+- Modern browsers with Web Speech API support
+- Chrome, Firefox, Safari, Edge (latest versions)
 
 ## Development Notes
 
