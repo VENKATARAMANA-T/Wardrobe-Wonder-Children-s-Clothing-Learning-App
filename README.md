@@ -8,6 +8,10 @@ LIVE LINK : https://venkataramana-t.github.io/Wardrobe-Wonder-Children-s-Clothin
 - **Explore Clothes**: Browse different clothing categories with audio pronunciation
 - **Play Quiz**: Interactive quiz game to test clothing knowledge
 - **Dress-Up Activity**: Mix and match clothing items to create outfits
+- **ASD Comfort Profile**: Simple sensory-friendly form with validation
+- **Clothes Learned Check**: Match items to correct categories with instant feedback
+- **Routing & Navigation**: BrowserRouter-based navigation across views
+- **Get Started Landing**: Centered entry screen for easy access
 - **Text-to-Speech**: Audio support for all clothing names and descriptions
 - **Responsive Design**: Works on desktop and mobile devices
 
@@ -33,7 +37,9 @@ wardrobe-app/
         ├── HomeView.jsx     # Home screen component
         ├── TrainingView.jsx # Learning mode component
         ├── QuizView.jsx     # Quiz game component
-        └── DressUpView.jsx  # Dress-up activity component
+        ├── DressUpView.jsx  # Dress-up activity component
+        ├── SensoryProfileForm.jsx   # ASD comfort profile form
+        └── ClothesLearnedForm.jsx   # Item-category learninform
 ```
 
 ## Setup Instructions
