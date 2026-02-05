@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { Smile, ChevronRight, Cloud, Star, Moon, Heart } from './Icons';
 import speak  from '../utils.js';
 
@@ -53,7 +54,8 @@ const CosmicAnimations = () => {
   );
 };
 
-const HomeView = ({ onNavigate }) => {
+const HomeView = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative flex flex-col w-full h-full min-h-[calc(100vh-80px)] animate-fade-in overflow-hidden">
       <CosmicAnimations />
@@ -78,7 +80,7 @@ const HomeView = ({ onNavigate }) => {
           <button 
             onClick={() => {
               speak("Time to Explore Clothes!");
-              onNavigate('training');
+              navigate('/training');
             }}
             className="group relative bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-600 hover:border-blue-500 overflow-hidden text-left h-56 flex flex-col justify-between hover:-translate-y-1"
           >
@@ -98,7 +100,7 @@ const HomeView = ({ onNavigate }) => {
           <button 
             onClick={() => {
               speak("Time to Play!");
-              onNavigate('quiz');
+              navigate('/quiz');
             }}
             className="group relative bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-600 hover:border-purple-500 overflow-hidden text-left h-56 flex flex-col justify-between hover:-translate-y-1"
           >
@@ -121,7 +123,7 @@ const HomeView = ({ onNavigate }) => {
           <button 
             onClick={() => {
               speak("Let's Dress Up!");
-              onNavigate('dressup');
+              navigate('/dressup');
             }}
             className="w-full group relative bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-600 hover:border-pink-500 overflow-hidden text-left flex flex-row items-center justify-between hover:-translate-y-1"
           >
@@ -137,6 +139,56 @@ const HomeView = ({ onNavigate }) => {
             </div>
             <div className="relative z-10 flex items-center text-pink-400 font-bold text-sm mt-4 group-hover:translate-x-2 transition-transform bg-slate-900/50 px-4 py-2 rounded-full border border-pink-500/30">
               Play Now <ChevronRight size={16} className="ml-2"/>
+            </div>
+          </button>
+        </div>
+
+        {/* Sensory Profile Form Card */}
+        <div className="w-full max-w-3xl">
+          <button
+            onClick={() => {
+              speak("Open the comfort profile form.");
+              navigate('/sensory');
+            }}
+            className="w-full group relative bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-600 hover:border-indigo-500 overflow-hidden text-left flex flex-row items-center justify-between hover:-translate-y-1"
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-900/20 to-transparent opacity-50" />
+            <div className="relative z-10 flex items-center gap-6">
+              <div className="w-20 h-20 bg-indigo-900 text-indigo-300 rounded-2xl flex items-center justify-center text-4xl shadow-sm border border-indigo-700/50">
+                🧩
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-1">Comfort Profile</h3>
+                <p className="text-sm text-slate-400 font-medium">ASD-friendly clothing preferences</p>
+              </div>
+            </div>
+            <div className="relative z-10 flex items-center text-indigo-400 font-bold text-sm mt-4 group-hover:translate-x-2 transition-transform bg-slate-900/50 px-4 py-2 rounded-full border border-indigo-500/30">
+              Open Form <ChevronRight size={16} className="ml-2" />
+            </div>
+          </button>
+        </div>
+
+        {/* Clothes Learned Form Card */}
+        <div className="w-full max-w-3xl">
+          <button
+            onClick={() => {
+              speak("Open the learning form.");
+              navigate('/learned');
+            }}
+            className="w-full group relative bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-600 hover:border-emerald-500 overflow-hidden text-left flex flex-row items-center justify-between hover:-translate-y-1"
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-emerald-900/20 to-transparent opacity-50" />
+            <div className="relative z-10 flex items-center gap-6">
+              <div className="w-20 h-20 bg-emerald-900 text-emerald-300 rounded-2xl flex items-center justify-center text-4xl shadow-sm border border-emerald-700/50">
+                🧠
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-1">Clothes I Learned</h3>
+                <p className="text-sm text-slate-400 font-medium">Pick clothes and how you felt</p>
+              </div>
+            </div>
+            <div className="relative z-10 flex items-center text-emerald-400 font-bold text-sm mt-4 group-hover:translate-x-2 transition-transform bg-slate-900/50 px-4 py-2 rounded-full border border-emerald-500/30">
+              Open Form <ChevronRight size={16} className="ml-2" />
             </div>
           </button>
         </div>

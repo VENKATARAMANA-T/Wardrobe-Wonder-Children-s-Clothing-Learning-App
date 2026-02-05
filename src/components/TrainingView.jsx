@@ -3,7 +3,7 @@ import { Volume2, XCircle } from './Icons';
 import { CATEGORIES, CLOTHING_DATA } from '../data';
 import speak from '../utils.js';
 
-const TrainingView = () => {
+function TrainingView  ()  {
             const [activeCategory, setActiveCategory] = useState('upper');
             const [selectedItem, setSelectedItem] = useState(null);
 

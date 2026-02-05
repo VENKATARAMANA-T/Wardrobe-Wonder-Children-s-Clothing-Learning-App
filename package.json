@@ -3,16 +3,17 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
-"homepage": "https://venkataramana-t.github.io/Wardrobe-Wonder-Children-s-Clothing-Learning-App",
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-},
+	"homepage": "https://venkataramana-t.github.io/Wardrobe-Wonder-Children-s-Clothing-Learning-App",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist"
+	},
 	"dependencies": {
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^7.13.0"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.66",
